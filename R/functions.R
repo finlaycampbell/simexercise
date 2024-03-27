@@ -536,7 +536,6 @@ vis_comparison <- function(scenarios,
 
 }
 
-
 ## compare different scenarios
 vis_deaths <- function(scenarios,
                        what = c("prevalence", "deltas", "incidence"),

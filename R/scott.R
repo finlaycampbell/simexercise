@@ -67,6 +67,6 @@ scen <- list(
   "Prioritised vaccination for elderly" = list(vax_rate = 0.002, vax_prioritised = TRUE),
   "Equal vaccination for all ages" = list(vax_rate = 0.002, vax_prioritised = FALSE)
 ) %>%
-  map(~ solve_ode(get_pars(vax_rate = .x[[1]], vax_prioritised = .x[[2]])))
+  map(~ solve_ode(do.call(get_pars, .x)))
 
 vis_comparison(scen, freescales = TRUE)
