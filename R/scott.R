@@ -51,8 +51,11 @@ pars <- get_pars(
 ## solve the model with those parameters
 solved <- solve_ode(pars)
 
-## plot the model
-vis_timeline(solved, "prevalence", log = FALSE, freescales = TRUE)
+## plot prevalence
+vis_timeline(solved, "incidence", log = FALSE, freescales = TRUE)
+
+## plot incidence
+vis_timeline(solved, "incidence", log = FALSE, freescales = TRUE)
 
 
 
